@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var dogYearsLabel: UILabel!
+    @IBOutlet weak var dogYearsText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +24,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func convertButtonPressed(sender: UIButton) {
+        
+        
+        let stringTextField = dogYearsText.text
+        dogYearsLabel.text = "\(stringTextField.toInt()! * 7)" + " human years"
+    }
+   
 }
 
